@@ -29,9 +29,8 @@ namespace webApp
             services.AddRouting();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, TelegramBotClient client, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, TelegramBotClient client)
         {
-            loggerFactory.AddConsole();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
